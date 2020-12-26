@@ -111,6 +111,10 @@
     justify-content: space-between;
 }
 
+.justify-content-around{
+    justify-content: space-around;
+}
+
 .align-items-center{
     align-items: center;
 }
@@ -169,6 +173,12 @@ a{
     color:var(--white);
     background: var(--blue);
 }
+
+html{
+    scroll-behavior: smooth;
+}
+
+
 
 /* HEADER START */
 
@@ -301,15 +311,102 @@ a{
 /* *************** */ 
 /* FOOTER START */
 
+
+
+.footer__title{
+    margin: 0;
+    margin-bottom: 60px;
+}
+
 .footer__input{
-    border-bottom: 1px solid var(--gray-txt);
-    line-height: 50px;
+    border: 0;
+    border-bottom: 1px solid #484848;
+    padding: 0  0 0   16px;
+    height: 50px;
+    font-family: var(--f400);
+    font-size: 16px;
+    background-color: #f8f8f8;
+}
+
+.footer__textarea{
+    margin-top: 30px;
+    padding: 22px 0 0 16px;
+    font-family: var(--f400);
+    font-size: 16px;
+    background: #f8f8f8;
+}
+
+.footer__btn{
+    background:#2b6ccd;
+    border:0;
+    padding: 13px 0;
+    color:#ffffff;
+    font-size: 16px;
+
+}
+
+.footer__info{
+    margin-top: 15px;
+    height: 425px ;
+}
+
+.footer_container{
+    padding:100px 0;
+    background: #f8f8f8;
+}
+
+.footer__inner{
+    padding:100px 0 55px ;
+}
+
+.footer__inside{
+    margin-bottom: 55px;
+}
+
+.footer__link1{
+    width: 285px;
+}
+
+.footer__link4{
+    width: 255px;
+}
+
+.footer__txt{
+    text-align: center;
+}
+
+.footer__inner a{
+    color: #2d2d2d;
+    transition: color 0.5s ;
+}
+
+.footer__inner a:hover{
+    color: #2b6ccd;
+}
+
+.footer__inside a{
+    line-height: 35px;
+    font-size: 16px;
 }
 
 
 /* FOOTER END */
 /* *************** */
 /* MEDIA START */
+
+@media(max-width: 1140px){
+    .footer__inside{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer__link1{
+        margin-top: 39px;
+    }
+    
+}
 
 @media(max-width: 1110px){
     .кроссовки{
@@ -351,6 +448,21 @@ a{
 
     .AdidasD-960__btn{
         margin: auto;
+    }
+
+    
+}
+
+@media(max-width: 980px){
+    .footer_box{
+        flex-direction: column;
+    }
+
+    .footer__box-left,
+    .footer__box-right{
+        width: var(--col-8);
+        margin: auto;
+        text-align: center;
     }
 }
 
@@ -455,11 +567,17 @@ a{
     line-height: 30px;
     font-size: 30px;
     }
+
+   
 }
 
 @media(max-width: 430px){
     .header__link{
         display: none;
+    }
+    .footer__box-left,
+    .footer__box-right{
+        width:var(--col-9)
     }
 }
 
@@ -477,6 +595,9 @@ a{
     .кроссовки__price{
     line-height: 20px;
     font-size: 20px;
+    }
+    .AdidasD-960__btn{
+        padding: 15px 50px;
     }
 }
 
